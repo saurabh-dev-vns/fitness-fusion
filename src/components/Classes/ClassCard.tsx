@@ -11,12 +11,12 @@ export function ClassCard({ title, instructor, image, time }: ClassCardProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
-      className="relative overflow-hidden rounded-xl shadow-lg group"
+      className="relative overflow-hidden rounded-xl border border-line shadow-lg group"
     >
       <img
         src={image}
         alt={title}
-        className="w-full h-64 object-cover"
+        className="w-full h-64 object-cover grayscale"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white">
         <h3 className="text-xl font-bold mb-1">{title}</h3>

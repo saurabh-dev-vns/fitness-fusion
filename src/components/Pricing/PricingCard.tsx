@@ -13,7 +13,7 @@ export function PricingCard({ title, price, features, isPopular = false }: Prici
     <motion.div
       whileHover={{ y: -5 }}
       className={`p-6 rounded-2xl ${
-        isPopular ? 'bg-purple-600 text-white' : 'bg-white'
+        isPopular ? 'bg-ink text-page' : 'bg-card text-ink border border-line'
       } shadow-xl`}
     >
       <h3 className="text-2xl font-bold mb-4">{title}</h3>
@@ -30,10 +30,10 @@ export function PricingCard({ title, price, features, isPopular = false }: Prici
         ))}
       </ul>
       <button
-        className={`w-full py-3 rounded-full font-semibold transition-colors ${
+        className={`w-full py-3 rounded-full font-semibold transition-opacity ${
           isPopular
-            ? 'bg-white text-purple-600 hover:bg-gray-100'
-            : 'bg-purple-600 text-white hover:bg-purple-700'
+            ? 'bg-page text-ink hover:opacity-80'
+            : 'bg-ink text-page hover:opacity-80'
         }`}
       >
         Get Started

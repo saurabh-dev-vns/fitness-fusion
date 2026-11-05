@@ -15,7 +15,7 @@ export function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/50 z-50 lg:hidden"
+          className="fixed inset-0 bg-black/60 z-50 lg:hidden"
           onClick={onClose}
         >
           <motion.div
@@ -23,12 +23,12 @@ export function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps) {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed right-0 top-0 h-full w-64 bg-white shadow-xl p-6"
+            className="fixed right-0 top-0 h-full w-64 bg-page border-l border-line shadow-xl p-6"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+              className="absolute top-4 right-4 text-mute hover:text-ink"
             >
               <X className="w-6 h-6" />
             </button>
@@ -38,7 +38,7 @@ export function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps) {
                   <li key={item.href}>
                     <a
                       href={item.href}
-                      className="block text-gray-800 hover:text-purple-600 py-2"
+                      className="block text-ink hover:opacity-60 transition-opacity py-2"
                       onClick={onClose}
                     >
                       {item.label}

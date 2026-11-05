@@ -18,7 +18,7 @@ export function NavItems({ className = '', onClick }: NavItemsProps) {
         <a
           key={item.href}
           href={item.href}
-          className={`text-gray-700 hover:text-purple-600 transition-colors ${className}`}
+          className={`text-mute hover:text-ink transition-colors ${className}`}
           onClick={onClick}
         >
           {item.label}

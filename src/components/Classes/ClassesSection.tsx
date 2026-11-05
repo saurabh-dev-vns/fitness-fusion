@@ -28,7 +28,7 @@ export function ClassesSection() {
       <div className="max-w-6xl mx-auto px-4">
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Featured Classes</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-mute max-w-2xl mx-auto">
             Join our expert-led group fitness classes designed for all levels
           </p>
         </AnimatedSection>

@@ -14,7 +14,7 @@ export function SocialLinks() {
         <a
           key={index}
           href={href}
-          className="text-gray-400 hover:text-purple-600 transition-colors"
+          className="text-gray-400 hover:text-white transition-colors"
         >
           <Icon className="w-6 h-6" />
         </a>

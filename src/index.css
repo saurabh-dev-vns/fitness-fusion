@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    scroll-behavior: smooth;
+/* ------------------------------------------------------------------
+   Theme tokens — black & white only (greys are tints of the two).
+   Light theme is the default; `.dark` on <html> switches to dark.
+   Values are space-separated RGB so Tailwind opacity modifiers work.
+------------------------------------------------------------------- */
+:root {
+  --page: 255 255 255; /* white */
+  --surface: 245 245 245;
+  --card: 255 255 255;
+  --line: 229 229 229;
+  --ink: 0 0 0; /* black */
+  --mute: 82 82 82;
+  color-scheme: light;
+}
+
+.dark {
+  --page: 0 0 0; /* black */
+  --surface: 10 10 10;
+  --card: 17 17 17;
+  --line: 38 38 38;
+  --ink: 255 255 255; /* white */
+  --mute: 163 163 163;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-page text-ink antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  @apply bg-ink text-page;
 }

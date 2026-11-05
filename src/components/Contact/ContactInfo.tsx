@@ -23,13 +23,13 @@ export function ContactInfo() {
     <div className="space-y-8">
       {contactDetails.map((item) => (
         <div key={item.title} className="flex items-start space-x-4">
-          <div className="bg-purple-100 p-3 rounded-lg">
-            <item.icon className="w-6 h-6 text-purple-600" />
+          <div className="bg-surface border border-line p-3 rounded-lg">
+            <item.icon className="w-6 h-6 text-ink" />
           </div>
           <div>
             <h3 className="font-semibold text-lg mb-1">{item.title}</h3>
             {item.details.map((detail, index) => (
-              <p key={index} className="text-gray-600">{detail}</p>
+              <p key={index} className="text-mute">{detail}</p>
             ))}
           </div>
         </div>

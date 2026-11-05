@@ -37,11 +37,11 @@ export function PricingSection() {
   ];
 
   return (
-    <div className="bg-gray-50 py-24">
+    <div className="bg-surface py-24">
       <div className="max-w-6xl mx-auto px-4">
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Membership Plans</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-mute max-w-2xl mx-auto">
             Choose the perfect plan that fits your fitness journey
           </p>
         </AnimatedSection>
