@@ -1,41 +1,22 @@
 import { AnimatedSection } from '../AnimatedSection';
 import { ClassCard } from './ClassCard';
+import { classesContent } from './classesContent';
 
 export function ClassesSection() {
-  const classes = [
-    {
-      title: 'High-Intensity Interval Training',
-      instructor: 'John Smith',
-      image: 'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&q=80',
-      time: 'Mon, Wed, Fri - 8:00 AM',
-    },
-    {
-      title: 'Yoga Flow',
-      instructor: 'Sarah Johnson',
-      image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&q=80',
-      time: 'Tue, Thu - 9:00 AM',
-    },
-    {
-      title: 'Strength Training',
-      instructor: 'Mike Wilson',
-      image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80',
-      time: 'Mon, Wed, Fri - 6:00 PM',
-    },
-  ];
+  const { title, description, items } = classesContent;
 
   return (
     <div className="py-24">
       <div className="max-w-6xl mx-auto px-4">
         <AnimatedSection className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Featured Classes</h2>
-          <p className="text-mute max-w-2xl mx-auto">
-            Join our expert-led group fitness classes designed for all levels
-          </p>
+          <h2 className="text-4xl font-bold mb-4">{title}</h2>
+          <p className="text-mute max-w-2xl mx-auto">{description}</p>
         </AnimatedSection>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {classes.map((classItem) => (
-            <AnimatedSection key={classItem.title}>
-              <ClassCard {...classItem} />
+          {items.map((item) => (
+            <AnimatedSection key={item.title} className="h-full">
+              <ClassCard {...item} />
             </AnimatedSection>
           ))}
         </div>

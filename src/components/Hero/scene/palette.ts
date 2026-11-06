@@ -38,7 +38,10 @@ const DARK: ScenePalette = {
  * The R3F <Canvas> is a separate React root, so React context (our theme)
  * doesn't cross into it. Read the theme out here and pass the palette in as props.
  */
-export function useScenePalette(): ScenePalette {
+export function useScenePalette(invert = false): ScenePalette {
   const { theme } = useTheme();
-  return theme === 'dark' ? DARK : LIGHT;
+  // `invert` is for scenes drawn on a card that uses inverted colours
+  // (black card in light mode, white card in dark mode).
+  const dark = (theme === 'dark') !== invert;
+  return dark ? DARK : LIGHT;
 }

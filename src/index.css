@@ -39,3 +39,8 @@ body {
 ::selection {
   @apply bg-ink text-page;
 }
+
+/* Section anchors stop below the fixed header (h-16 = 4rem). */
+section[id] {
+  scroll-margin-top: 4rem;
+}
